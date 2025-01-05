@@ -1,0 +1,172 @@
+{
+	"info": {
+		"_postman_id": "6a174599-8ac0-4fee-b436-e0078c92f70e",
+		"name": "Booking API Practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40778999"
+	},
+	"item": [
+		{
+			"name": "Create Booking",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"Ken\",\r\n    \"lastname\" : \"Takkakura\",\r\n    \"totalprice\" : 1000,\r\n    \"depositpaid\" : true,\r\n    \"bookingdates\" : {\r\n        \"checkin\" : \"2024-01-09\",\r\n        \"checkout\" : \"2024-01-26\"\r\n    },\r\n    \"additionalneeds\" : \"Breakfast\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bookURL}}booking",
+					"host": [
+						"{{bookURL}}booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Booking IDs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bookURL}}booking",
+					"host": [
+						"{{bookURL}}booking"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Particular Bookin ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{bookURL}}booking/:id",
+					"host": [
+						"{{bookURL}}booking"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update the Booking Details",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=53cdf6d1acbd2e8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\": \"Kenny\",\r\n    \"lastname\": \"Takkakurai\",\r\n    \"totalprice\": 1000,\r\n    \"depositpaid\": true,\r\n    \"bookingdates\": {\r\n        \"checkin\": \"2024-01-29\",\r\n        \"checkout\": \"2024-01-31\"\r\n    },\r\n    \"additionalneeds\": \"Ichuraku Ramen\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bookURL}}booking/:id",
+					"host": [
+						"{{bookURL}}booking"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Particular Booking Deatails",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=e74a6bae401d866",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"firstname\" : \"James\",\r\n    \"lastname\" : \"yokeio\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{bookURL}}booking/:id",
+					"host": [
+						"{{bookURL}}booking"
+					],
+					"path": [
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete the Particular Booking Detail",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Cookie",
+						"value": "token=8be7512277db469",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{bookURL}}booking/63",
+					"host": [
+						"{{bookURL}}booking"
+					],
+					"path": [
+						"63"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
