@@ -1,0 +1,151 @@
+{
+	"info": {
+		"_postman_id": "27de636b-0d00-4712-985e-253d62fa913e",
+		"name": "API Practice",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40778999"
+	},
+	"item": [
+		{
+			"name": "GET All Product Lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}productsList",
+					"host": [
+						"{{APIURL}}productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Brand Lists",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}productsList",
+					"host": [
+						"{{APIURL}}productsList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Searched Products List",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{APIURL}}searchProduct?search_product=top",
+					"host": [
+						"{{APIURL}}searchProduct"
+					],
+					"query": [
+						{
+							"key": "search_product",
+							"value": "top"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create  an Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Test\",\r\n    \"email\": \"test@yopmail.com\",\r\n    \"password\": \"Test@1234\",\r\n    \"title\": \"Mr\",\r\n    \"birth_date\": 18,\r\n    \"birth_month\": 7,\r\n    \"birth_year\": 2000,\r\n    \"firstname\": \"Tester\",\r\n    \"lastname\": \"Tester\",\r\n    \"company\": \"Test company\",\r\n    \"address1\": \"karumari amman street\",\r\n    \"address2\": \"Velachery\",\r\n    \"country\": \"India\",\r\n    \"zipcode\": 600001,\r\n    \"state\": \"tamil nadu\",\r\n    \"city\": \"Chennai\",\r\n    \"mobile_number\": 1234567890\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{APIURL}}createAccount?name=tester&email=testa1@yopmail.com&password=Test@1234&title=Mr&birth_date=18&birth_month=7&birth_year=2000&firstname=tester&lastname=tester&company=test company&address1=karumari amman street&address2=velacherry&country=India&zipcode=600001&state=tamil nadu&city=Chennai&mobile_number=1234567890",
+					"host": [
+						"{{APIURL}}createAccount"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "tester"
+						},
+						{
+							"key": "email",
+							"value": "testa1@yopmail.com"
+						},
+						{
+							"key": "password",
+							"value": "Test@1234"
+						},
+						{
+							"key": "title",
+							"value": "Mr"
+						},
+						{
+							"key": "birth_date",
+							"value": "18"
+						},
+						{
+							"key": "birth_month",
+							"value": "7"
+						},
+						{
+							"key": "birth_year",
+							"value": "2000"
+						},
+						{
+							"key": "firstname",
+							"value": "tester"
+						},
+						{
+							"key": "lastname",
+							"value": "tester"
+						},
+						{
+							"key": "company",
+							"value": "test company"
+						},
+						{
+							"key": "address1",
+							"value": "karumari amman street"
+						},
+						{
+							"key": "address2",
+							"value": "velacherry"
+						},
+						{
+							"key": "country",
+							"value": "India"
+						},
+						{
+							"key": "zipcode",
+							"value": "600001"
+						},
+						{
+							"key": "state",
+							"value": "tamil nadu"
+						},
+						{
+							"key": "city",
+							"value": "Chennai"
+						},
+						{
+							"key": "mobile_number",
+							"value": "1234567890"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
